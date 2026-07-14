@@ -1,3 +1,4 @@
+alias s := setup
 alias b := build
 
 default:
@@ -7,3 +8,7 @@ build:
     uv run pyinstaller today.spec --noconfirm
     uv run pyinstaller tomorrow.spec --noconfirm
     uv run pyinstaller yesterday.spec --noconfirm
+
+setup:
+    uv sync
+
