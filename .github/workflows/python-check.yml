@@ -1,12 +1,24 @@
 name: Python Check
 on: [push]
-
 jobs:
   code-check:
     runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v6
-      - run: uv run python ./src/yesterday.py
-      - run: uv run python ./src/today.py
-      - run: uv run python ./src/tomorrow.py
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9
+
+      - name: Install Python
+        run: uv python install
+
+      - name: Run yesterday
+        run: uv run python ./src/yesterday.py
+
+      - name: Run today
+        run: uv run python ./src/today.py
+
+      - name: Run tomorrow
+        run: uv run python ./src/tomorrow.py
