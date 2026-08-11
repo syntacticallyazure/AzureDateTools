@@ -3,13 +3,12 @@ Three python scripts that simply print the corresponding date and copies it to c
 Please see the Justfile for build instructions.
 
 ```
-uv run python ./src/today.py --help
 usage: today.py [-h] [-f {iso,au}]
 
-Prints date and copy it to the clipboard on Windows.
+Prints date and copies it to the clipboard
 
 options:
   -h, --help            show this help message and exit
   -f, --format {iso,au}
-                        The ISO format (YYYY-MM-DD) or Australian (au) format (DD/MM/YYYY)
+                        iso (YYYY-MM-DD), au (DD/MM/YYYY)
 ```

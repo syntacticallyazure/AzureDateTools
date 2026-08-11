@@ -3,8 +3,8 @@ import argparse
 import os
 import platform
 
-parser = argparse.ArgumentParser(description="Prints date and copy it to the clipboard on Windows.")
-parser.add_argument("-f", "--format", choices=["iso", "au"], default="iso", help="The ISO format (YYYY-MM-DD) or Australian (au) format (DD/MM/YYYY)")
+parser = argparse.ArgumentParser(description="Prints date. If on Windows, also copies it to clipboard.")
+parser.add_argument("-f", "--format", choices=["iso", "au"], default="iso", help="iso (YYYY-MM-DD), au (DD/MM/YYYY)")
 args = parser.parse_args()
 
 today = date.today()

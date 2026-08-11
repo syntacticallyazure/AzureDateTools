@@ -1,0 +1,3 @@
+repository:
+  description: "Python script that prints the date. If on Windows, also copies it to clipboard."
+  
