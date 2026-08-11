@@ -14,11 +14,11 @@ jobs:
       - name: Install Python
         run: uv python install
 
-      - name: Run yesterday
-        run: uv run python ./src/yesterday.py
-
       - name: Run today
         run: uv run python ./src/today.py
+
+      - name: Run yesterday
+        run: uv run python ./src/yesterday.py
 
       - name: Run tomorrow
         run: uv run python ./src/tomorrow.py
