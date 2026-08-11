@@ -1,0 +1,12 @@
+name: Python Check
+on: [push, pull_request]
+
+jobs:
+  code-check:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv run python ./src/yesterday.py
+      - run: uv run python ./src/today.py
+      - run: uv run python ./src/tomorrow.py
