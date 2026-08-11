@@ -1,5 +1,5 @@
 name: Python Check
-on: [push, pull_request]
+on: [push]
 
 jobs:
   code-check:
