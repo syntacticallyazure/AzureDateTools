@@ -5,6 +5,5 @@ description = "personal tools to quickly get the date and copy it to clipboard i
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "pyinstaller>=6.21.0",
     "pyperclip>=1.11.0",
 ]
